@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'RaspiHive Docs', // Title for your website.
-  tagline: 'A website for testing',
+  tagline: 'How To RaspiHive',
   url: 'https://raspihive.org', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
