@@ -39,7 +39,7 @@ class Users extends React.Component {
                 <a
                   href={`${siteConfig.repoUrl}/edit/master/website/siteConfig.js`}
                   className="button">
-                  Add your company
+                  Raspihive
                 </a>
               </React.Fragment>
             )}
