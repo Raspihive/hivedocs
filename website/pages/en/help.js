@@ -21,17 +21,19 @@ function Help(props) {
 
   const supportLinks = [
     {
-      content: `Learn more using the [documentation on this site.](${docUrl(
-        'doc1.html',
+      content: `Learn more using the [<b>Quickstart on this site.</b>](${docUrl(
+        'quickstart.html',
       )})`,
       title: 'Browse Docs',
     },
     {
-      content: 'Ask questions about the documentation and project',
+      content: `Ask questions about the documentation and project [On our <b>Discord</b> server.](
+        https://discord.com/invite/bZhKUe6
+      )`,
       title: 'Join the community',
     },
     {
-      content: "Find out what's new with this project",
+      content: "Find out what's new with this project on our website [<b>https://raspihive.org</b>](https://raspihive.org)",
       title: 'Stay up to date',
     },
   ];

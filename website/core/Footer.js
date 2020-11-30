@@ -37,13 +37,6 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>Community</h5>
-            <a href={`${this.props.config.baseUrl}users`}>User Showcase</a>
-            <a
-              href="https://stackoverflow.com/questions/tagged/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Stack Overflow
-            </a>
             <a href="https://discord.com/invite/bZhKUe6">Project Chat</a>
             <a
               href="https://twitter.com/"
@@ -54,7 +47,7 @@ class Footer extends React.Component {
           </div>
           <div>
             <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
+            <a href="https://raspihive.org">Website</a>
             <a href="https://github.com/Raspihive/raspihive">GitHub</a>
             <a
               className="github-button"

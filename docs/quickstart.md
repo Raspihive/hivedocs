@@ -24,6 +24,6 @@ sidebar_label: Quick start
 
 ## Setup
 
-Download the ready-to-go image from our [Website](https://raspihive.org/download)
+Download the ready-to-go image from our [<b>Website</b>](https://raspihive.org/download)
 
-Continue -> [here](https://docs.raspihive.org/docs/install#45-first-start-of-raspihive-and-installation-of-the-hornet-node) with our guide
+Continue -> [<b>here</b>](https://docs.raspihive.org/docs/install#45-first-start-of-raspihive-and-installation-of-the-hornet-node) with our guide

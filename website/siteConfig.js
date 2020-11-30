@@ -81,6 +81,11 @@ const siteConfig = {
   // Add custom scripts here that would be placed in <script> tags.
   scripts: ['https://buttons.github.io/buttons.js'],
 
+  url: 'https://docs.raspihive.org',
+  projectName:'Raspihive',
+  organizationName: 'Cryptec',
+  baseURL:'raspihive',
+
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   // No .html extensions for paths.
