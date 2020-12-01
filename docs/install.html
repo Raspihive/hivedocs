@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Start · RaspiHive Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 1 Hardware and software requirements"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Start · RaspiHive Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://raspihive.github.io/hivedocs/"/><meta property="og:description" content="## 1 Hardware and software requirements"/><meta property="og:image" content="https://raspihive.github.io/hivedocs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://raspihive.github.io/hivedocs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/hivedocs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/hivedocs/js/scrollSpy.js"></script><link rel="stylesheet" href="/hivedocs/css/main.css"/><script src="/hivedocs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/hivedocs/"><img class="logo" src="/hivedocs/img/favicon.ico" alt="RaspiHive Docs"/><h2 class="headerTitleWithLogo">RaspiHive Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/hivedocs/docs/quickstart" target="_self">Docs</a></li><li class=""><a href="/hivedocs/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Setup</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Quick start</h3><ul class=""><li class="navListItem"><a class="navItem" href="/hivedocs/docs/quickstart">Quick start</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Setup</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/hivedocs/docs/install">Start</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Start</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="1-hardware-and-software-requirements"></a><a href="#1-hardware-and-software-requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1 Hardware and software requirements</h2>
+<p>Hardware requirements:</p>
+<ul>
+<li>Rasperry Pi 4 with at least 4 GB RAM</li>
+<li>a suitable case with fan for the Raspberry Pi</li>
+<li>Official Raspberry Pi power supply</li>
+<li>A 2.5 inch USB hard disk (250 GB or more) --&gt; Important: make sure that the USB-SSD<br>
+hard disk an external power supply, i.e. a power supply unit is supplied.</li>
+<li>USB - card reader for microSD cards</li>
+<li>Monitor with HDMI connector</li>
+<li>A Micro-HDMI to HDMI adapter</li>
+<li>One external USB keyboard + wired USB mouse</li>
+<li>Network or Ethernet LAN cable with an RJ 45 connector (CAT-6)</li>
+<li>Optional: Sunfounder 7 inch touchscreen display</li>
+<li>Optional: 1 microSD card with 64 GB or more. (If you don't want to use a SSD, I would choose from
+However, we do not recommend continuous node operation for performance reasons. For test purposes this is completely sufficient)</li>
+</ul>
+<p>Software requirements:</p>
+<ul>
+<li>Raspberry Pi OS (64 bit) beta</li>
+<li>BalenaEtcher - Flash tool to flash Rasperry Pi OS (64-bit) to USB-SSD hard disk</li>
+</ul>
+<p>Unpack the downloaded zip-file (2020-05-27-raspios-buster-arm64) in your download directory.</p>
+<p>Now we have all required tools and we can start to set up the rest.</p>
+<h2><a class="anchor" aria-hidden="true" id="2-download-and-setup-raspberry-pi-os-64-bit-beta"></a><a href="#2-download-and-setup-raspberry-pi-os-64-bit-beta" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 Download and setup Raspberry Pi OS (64 bit) beta</h2>
+<p>Download now the well-known flash tool BalenaEtcher:</p>
+<ul>
+<li><a href="https://www.balena.io/etcher/"> Download BalenaEtcher flash tool </a></li>
+</ul>
+<p>Under Windows: Navigate to your download folder and double-click to start the installation of the program under Windows.</p>
+<p>Under Linux: navigate to your download folder and right-click on the downloaded BalenaEtcher Flash tool. Open the properties and click on the tab &quot;Access rights&quot; and check the box &quot;Allow the file to run as a program&quot;. After that you can execute the file by double clicking on it.</p>
+<ol>
+<li>click on &quot;Flash from file&quot; and select the downloaded and unzipped &quot;2020-05-27-raspios-buster-arm64.img&quot;, from your download folder on your computer</li>
+</ol>
+<p>
+    <img src="../images/1.png" />
+</p>
+<p>Now select the target medium under &quot;Select target&quot;, i.e. the connected USB-SSD hard disk.</p>
+<p><img src="../images/2.png"></p>
+<p>The connected USB SSD hard drive is usually automatically recognized by BalenaEtcher.</p>
+<p><img src="../images/3.png"></p>
+<p>Note: If you receive the message &quot;... your SSD drive is unusually large for an SD card or USB stick&quot; you can ignore it. Click on Continue and then on Flash!</p>
+<p>Flash&quot; starts the setup process, after the flash process is finished a validation process takes place and then you have created a bootable USB-SSD medium with the operating system Raspberry Pi OS (64 bit) - beta.</p>
+<p><img src="../images/4.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="3-short-version-for-setting-up-raspihive"></a><a href="#3-short-version-for-setting-up-raspihive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 Short version for setting up Raspihive</h2>
+<p>In the following, I will describe the steps necessary to set up Raspihive.
+After you have flashed the Raspbian OS (64 bit) beta operating system onto your USB-SSD hard drive, you can wire your Raspberry Pi to your peripherals and start it. The next steps are:</p>
+<ol>
+<li>basic configuration of your Raspberry Pi with the setup wizard.</li>
+<li>create Fritz!Box (Router) port shares for the following ports : 80, 443, 15600 all TCP and port: 14626 UDP.</li>
+<li>clone the Raspihive repository:
+sudo git clone <a href="https://github.com/Raspihive/raspihive.git">https://github.com/Raspihive/raspihive.git</a></li>
+<li>copy the text file &quot;Raspihive&quot; in the directory &quot;pi&quot; to the desktop and make it executable with ```sudo chmod +x Raspihive``.</li>
+<li>the first time Raspihive is started: double-click on the created start file and select &quot;run in terminal&quot;. Then you can install Hornet in the &quot;Install Menu&quot;.
+If you have your own domain, and have entered DynDNS in the Fritzbox or installed the No-IP-Client, you can call your domain from the internet under &quot;Your-Domain.xx&quot; after installing the Reverse Proxy + Certbot. During the installation in the terminal you will be asked to enter a password. This is the password for secure dashboard access.
+The default username is &quot;Raspihive&quot; (without the &quot;&quot;).</li>
+<li>after the installation you can start the Certbot Wizard in the terminal with the command
+sudo certbot -nginx
+and get a SSL certificate for your domain.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="4-long-version-for-setting-up-raspihive"></a><a href="#4-long-version-for-setting-up-raspihive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4 Long version for setting up Raspihive</h2>
+<p>In the following I describe all steps to set up Raspihive including some additional explanations.</p>
+<h3><a class="anchor" aria-hidden="true" id="41-basic-configuration-of-the-raspberry-pis-with-the-setup-wizard"></a><a href="#41-basic-configuration-of-the-raspberry-pis-with-the-setup-wizard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.1 Basic configuration of the Raspberry Pi's with the setup wizard</h3>
+<p>After flashing your USB SSD hard drive with BalenaEtcher, you can now connect it to the USB port of your Raspberry Pi. In addition, connect the USB mouse and keyboard, connect the microHDMI cable to one of the two microHDMI ports of your Raspberry and the other end of the monitor cable to the HDMI port of your main monitor. This usually requires an HDMI to microHDMI adapter.  Optional but recommended: Connect your Raspberry Pi from the router or switch to the RJ 45 socket of the Pi with a network cable. Finally connect the power supply to the pi with the original Rasberry Pi power supply to the USB-C interface.
+The first boot process can take 5 - 10 minutes.
+During the test phase it turned out that the USB boot process sometimes doesn't work properly with some USB-SSD hard drives connected to the USB 3.0 port (blue ports) on the Raspberry Pi 4. If this should be the case, you have to use the USB 2.0 port for the first boot process. In the Raspihive app I've included a fix for this, so after the SSD fix has been done your hard drive should boot from the USB 3.0 port afterwards.</p>
+<p>Set the correct HDMI port on your main monitor and you will be welcomed after about 5 minutes with the login screen or the initial setup wizard.</p>
+<p>Please make a note of the local IP address of the Raspberry Pi's and click on &quot;Next&quot;...</p>
+<p><img src="../images/5.png"></p>
+<p>and make the appropriate country, language and time zone settings and click &quot;Next&quot; again...</p>
+<p><img src="../images/6.png"></p>
+<p>Now set a secure password for the default user Pi and click on &quot;Next&quot;...</p>
+<p><img src="../images/7.png"></p>
+<p>If you see a black border between the current screen and your monitor, check &quot;This screen shows a black border around the desktop&quot; and click &quot;Next&quot;...</p>
+<p><img src="../images/8.png"></p>
+<p>At this step you can choose if you want to connect your Raspberry Pi to your network via WLAN. This step is not necessary if you have plugged a network cable into the RJ 45 socket of the Pi. If this is the case for you, you can simply click on &quot;Skip&quot;...if not, select your access point and click on &quot;Next&quot;, then enter your WLAN access password and the Raspberry Pi is connected to your network via WLAN.</p>
+<p><img src="../images/9.png"></p>
+<p>The next step is very important. Always make sure that you keep your operating system up to date and that you provide regular updates. This generally improves the stability, performance and security of your system. Click on &quot;Next&quot; to start the update process...</p>
+<p><img src="../images/10.png"></p>
+<p>which may take a little time, because the available updates are downloaded first...</p>
+<p><img src="../images/11.png"></p>
+<p>and installed afterwards...</p>
+<p><img src="../images/12.png"></p>
+<p>After successfully updating your system, you should restart your Raspberry Pi to make the changes effective.</p>
+<p><img src="../images/13.png"></p>
+<p>Click once on &quot;Restart&quot; and wait until you see the desktop again. The restart may take a few minutes again, so be patient at this point ;) The next restart will be very fast.</p>
+<p><img src="../images/14.png"></p>
+<h3><a class="anchor" aria-hidden="true" id="42-setting-up-the-port-shares-in-the-fritzbox-router"></a><a href="#42-setting-up-the-port-shares-in-the-fritzbox-router" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.2 Setting up the port shares in the Fritz!Box (Router)</h3>
+<p>Before we take care of setting up Raspihive, we currently need to enable the following ports in our router.</p>
+<p>Essential, Port: 14626, Protocol UDP - Autopeering
+Essential, Port: 15600, Protocol TCP - Gossip (neighbors)
+Optional, Port: 80 Protocol TCP - Certbot
+Optional, Port: 443 Protocol TCP - Certbot</p>
+<p>Since I'm using a Fritz! box, I'll show you how to set up the port shares using the Fritzbox.</p>
+<ol>
+<li>open the user interface of the Fritz!box by typing &quot;fritz.box&quot; in your browser or the local IP address: &quot;192.168.178.1
+The login password is usually printed on the bottom of the Fritz!Box. Take the &quot;Fritz!Box password&quot; and enter it on the login screen or on the login page of the Fritz!Box user interface and click on &quot;Login&quot;...</li>
+</ol>
+<p><img src="../images/15.png"></p>
+<p>Then click on: &quot;Internet&quot; (1)...</p>
+<p><img src="../images/16.png"></p>
+<p>--&gt; &quot;Shares&quot; (2) - - &gt; &quot;Add device for shares&quot; (3)...</p>
+<p><img src="../images/17.png"></p>
+<p>Now select your Raspberry Pi under the item &quot;Device&quot;.</p>
+<p><img src="../images/18.png"></p>
+<p>The local IP address noted at the beginning, which was displayed in the setup wizard, must match this IP at point 2 (red arrow). It is possible that you are using more than one Raspberry Pi and then you can distinguish them by the different local IP address. Then click on &quot;New share&quot; (3)...</p>
+<p><img src="../images/19.png"></p>
+<p>Select here under &quot;Application&quot; - - &gt; &quot;Other application&quot; (1)...</p>
+<p><img src="../images/20.png"></p>
+<p>Now enter the corresponding designation (2), the corresponding protocol (UDP or TCP) (3) and the port number to be released (4).</p>
+<p><img src="../images/21.png"></p>
+<p>To operate a Hornet Node without a SSL certificate, it is sufficient to open the first two &quot;essential&quot; ports. However, if you have your own domain, which you have entered under DnyDNS in the Fritz! box, then you can also release the optional ports 80 - HTTP and 443 - HTTPS. After setting the port shares click on &quot;OK&quot;, so that your set port shares are taken over...</p>
+<p><img src="../images/22.png"></p>
+<p>and then click on &quot;Apply&quot; again. Now the port releases are set and activated. You can also see this by the dots that change from grey to green.</p>
+<p><img src="../images/23.png"></p>
+<p>Now the preparations are finished and we can dedicate ourselves to the establishment of Raspihive.</p>
+<h3><a class="anchor" aria-hidden="true" id="43-cloning-the-raspihive-repository-of-github"></a><a href="#43-cloning-the-raspihive-repository-of-github" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.3 Cloning the Raspihive repository of Github</h3>
+<p>Most of the work is now done. Now the exciting part of the tutorial begins.
+Open the Chromium Webbrowser on the desktop of your Raspberry Pi.</p>
+<p><img src="../images/24.png"></p>
+<p>Type the following github address into the address line (1) of the browser:
+&quot;<a href="https://github.com/Raspihive/raspihive">https://github.com/Raspihive/raspihive</a>&quot; - - &gt; Click on the green code button (2) and then on the copy link address button (3)...</p>
+<p><img src="../images/25.png"></p>
+<p>After you have copied the link address into the clipboard, open the terminal on your Raspberry Pi and copy the following command into the terminal...</p>
+<p><img src="../images/26.png"></p>
+<p>First enter &quot;sudo git clone&quot; + the copied link.
+To paste the link you have to right click once in the terminal and then select &quot;Paste&quot;:
+The complete command looks like this:
+&quot;sudo git clone <a href="https://github.com/Raspihive/raspihive.git">https://github.com/Raspihive/raspihive.git</a>&quot;</p>
+<p><img src="../images/27.png"></p>
+<p>With this the Raspihive Github Repository was downloaded or cloned into the &quot;pi&quot; directory.</p>
+<h3><a class="anchor" aria-hidden="true" id="44-create-a-shortcut-to-the-supplied-raspihive-start-file-and"></a><a href="#44-create-a-shortcut-to-the-supplied-raspihive-start-file-and" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.4 Create a shortcut to the supplied Raspihive start file and</h3>
+<p>We stay in the terminal for now to make the included Raspihive startup file executable. After that you can start Raspihive with a double click... ;)
+Enter the following commands one after the other:</p>
+<ul>
+<li>cd raspive</li>
+<li>sudo mv Raspihive /home/pi/Desktop</li>
+<li>cd ... (note the space between cd and ..)</li>
+<li>cd desktop</li>
+<li>sudo chmod +x raspihive</li>
+</ul>
+<p>You will see the Raspihive startup file on your desktop after entering the second command. When you have entered all commands, you can close the terminal window.</p>
+<p><img src="../images/28.png"></p>
+<h3><a class="anchor" aria-hidden="true" id="45-first-start-of-raspihive-and-installation-of-the-hornet-node"></a><a href="#45-first-start-of-raspihive-and-installation-of-the-hornet-node" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.5 First start of Raspihive and installation of the Hornet Node</h3>
+<p>Double-click on the Raspihive startup file created on your desktop.</p>
+<p><img src="../images/29.png"></p>
+<p>and select &quot;Run in Terminal&quot; (2) once if you need an SSL certificate for your node or domain name. After the initial setup of the SSL certificate you can start Raspihive with &quot;Run&quot;. We currently need the terminal only once for the dashboard password and for the Certbot process.  Otherwise it's enough to simply click on &quot;Run&quot; when you start Raspihive to start Raspihive.</p>
+<p>Voilà! - Now you are in the main menu of Raspihive!
+To install Hornet you only have to navigate to the &quot;Install menu&quot;...</p>
+<p><img src="../images/30.png"></p>
+<p>And click on &quot;Install Hornet&quot; ;)</p>
+<p><img src="../images/31.png"></p>
+<p>The successful completion of the installation is confirmed with an info window &quot;Hornet Node successfully installed&quot;.</p>
+<p><img src="../images/32.png"></p>
+<p>Hornet starts automatically and starts downloading the snapshot file, which you can find in the logs. So you can see what your node is doing at the moment, let's have a look at the logs... ;) Click on &quot;Return to start page&quot; in the &quot;Install Menu&quot;...</p>
+<p>...and then on &quot;Node control&quot; and then on &quot;Hornet Node Control&quot;...</p>
+<p><img src="../images/33.png"></p>
+<p>Click on &quot;Watch the logs&quot;...and you will see the last entries of the logfile...</p>
+<p><img src="../images/34.png"></p>
+<p>Afterwards you can close the window by clicking on &quot;Quit-Log window&quot;...</p>
+<p><img src="../images/35.png"></p>
+<p>Now we are finished with the basic setup of the IOTA-Hornet Fullnode. A few words about the processes that run in the background. Raspihive not only takes care of the Hornet Node setup, but also takes care of security and installs and configures the firewall, sets the correct port shares and also automatically installs SSH-Guard.</p>
+<h3><a class="anchor" aria-hidden="true" id="46-optional-installation-of-the-reverse-proxy--certbot--process-for-obtaining-an-ssl-certificate-from-lets-encrypt"></a><a href="#46-optional-installation-of-the-reverse-proxy--certbot--process-for-obtaining-an-ssl-certificate-from-lets-encrypt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4.6 Optional: Installation of the reverse proxy + Certbot + process for obtaining an SSL certificate from Let's Encrypt</h3>
+<p>For this step you need a domain, which you can get for example very cheap from the provider Selfhost.de. How this works, I have described here:
+<a href="https://iota-industrie-4-0.blogspot.com/2019/07/erhalt-einer-statischen-domain-von.html">https://iota-industrie-4-0.blogspot.com/2019/07/erhalt-einer-statischen-domain-von.html</a>
+If you have your own domain, e.g. from Selfhost, and you have entered the DynDNS data in the Fritzbox or alternatively installed the No-IP-Client, you can access your domain from the internet under &quot;Your-Domain.xx&quot; after installing the Reverse Proxy's + Certbot.</p>
+<p>Just click once in the &quot;Install menu&quot; on &quot;Install Nginx + Certbot</p>
+<p><img src="../images/36.png"></p>
+<p>During the installation in the terminal you will be asked to enter a password for the dashboard access. Make a note of the password or save it in a password manager. This is the password you need to access the dashboard. The default username is &quot;Raspihive&quot; (without the &quot;&quot;). Important note: By default, the password is not displayed during the input! Also make sure that you click with the mouse on the terminal once. Pay attention to the red circle in the terminal window. This is how it should look like on your computer.</p>
+<p><img src="../images/37.png"></p>
+<p>for security reasons or to avoid typing errors, you have to enter the password a second time.</p>
+<p><img src="../images/38.png"></p>
+<p>The successful completion of the installation of the reverse proxy (Nginx) and the certbot is confirmed by the display of an info box.</p>
+<p><img src="../images/39.png"></p>
+<p>Opens a new terminal window after installation and starts the Certbot Wizard with the command
+sudo certbot --nginx
+to get an SSL certificate for your domain.</p>
+<p><img src="../images/40.png"></p>
+<p>You must first enter your email address to receive notification when the certificate expires. Usually certificates are valid for 90 days and must be renewed after that. Confirm the entry with the Enter key...</p>
+<p><img src="../images/41.png"></p>
+<p>After that you have to accept the Terms of Services with &quot;A&quot;...</p>
+<p><img src="../images/42.png"></p>
+<p>The next time you enter your email address, you will be asked if you want to share your email address with the Electronic Frontier Foundation. I have chosen &quot;Y&quot; here.</p>
+<p><img src="../images/43.png"></p>
+<p>In the next important step, you have to enter your domain and confirm the input with Enter...</p>
+<p><img src="../images/44.png"></p>
+<p>Finally, select 2 here so that all requests from HTTP are automatically forwarded to HTTPS.</p>
+<p><img src="../images/45.png"></p>
+<p>At the end you should see the message: &quot;Congratulations&quot; and a short summary about the installed SSL certificate. My certificate would expire, as shown in the screenshot, for example on 23.02.2020. Now you can close the terminal window and reach your node via your secured domain.</p>
+<p><img src="../images/46.png"></p>
+<p>With this we have completed the setup of the Hornet Node.</p>
+<p>Time to take a look at the dashboard at this point. Click on &quot;Dashboard access&quot; in the main menu of Raspihive...</p>
+<p><img src="../images/47.png"></p>
+<p>Click on &quot;Open dashboard&quot;...</p>
+<p><img src="../images/48.png"></p>
+<p>Enter as username Raspihive and your assigned password, which you used during the installation of Nginx and Certbot in the terminal.</p>
+<p><img src="../images/49.png"></p>
+<p>And now you are in the Hornet-Dashboard ;)</p>
+<p><img src="../images/50.png"></p>
+<p>This brings us to the end of setting up a Hornet Node with Raspihive. In the following points I will briefly describe the further functions and give some tips for the smooth operation of the Hornet Node as well as an outlook on the further exciting development of Raspihive.</p>
+<h2><a class="anchor" aria-hidden="true" id="5-further-functions-of-raspihive"></a><a href="#5-further-functions-of-raspihive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. further functions of Raspihive</h2>
+<ol start="5">
+<li>other functions of Raspihive</li>
+</ol>
+<ul>
+<li><p>Since regular system updates are very important, you should provide your operating system with updates in addition to the Hornet updates. Just click on &quot;System-update&quot; and wait until the update is finished. Raspihive also takes care of the system maintenance and removes unnecessary packages automatically.</p></li>
+<li><p>The point &quot;Packages-update&quot; refers to the necessary additional programs, such as the Build-essentials, Snapd and Go, which are automatically installed during the Hornet installation. If you only want to update these packages, you can do so by clicking on the Packages-update button.</p></li>
+<li><p>Raspihive-update: From time to time more exciting features or bugfixes of Raspihive will appear. So that you can benefit from them, I have integrated a Raspihive-update function. You can also follow the project status on Github at <a href="https://github.com/raspihive">https://github.com/raspihive</a>.</p></li>
+<li><p>Hornet-update: When a Hornet-update is released by the developers...just click the button ;)</p></li>
+</ul>
+<p><img src="../images/51.png"></p>
+<p>The Hornet Node Control Center:
+Here you have the possibility to start, stop or restart your Hornet Node or just have a look at the logs from time to time.
+If the Hornet Node or the database crashes, you can restart it with a simple click on &quot;Remove the mainnetdb&quot;. If the question comes up: You don't have to stop the node first, then delete the database and start the node again manually or by mouse click, these functions are already stored, so a simple mouse click is sufficient...</p>
+<p><img src="../images/52.png"></p>
+<p>To the tools:</p>
+<ul>
+<li>Ping - With the ping tool you can check the availability of a host.</li>
+<li>Mount DB - With this tool you can move the Hornet Node to an external hard disk. However, this feature is still in the beta phase.</li>
+<li>SSD-fix - with a click on this button the USB boot problem with some USB-SSD hard drives is solved, so that they will boot from the USB 3.0 port afterwards. This feature was tested by me and works. But I can't say if it works with all hard drives on the market and therefore this tool got the beta status from me.</li>
+</ul>
+<p><img src="../images/53.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="6-outlook-and-further-development-of-raspihive"></a><a href="#6-outlook-and-further-development-of-raspihive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6 outlook and further development of Raspihive</h2>
+<p>Since Raspihive wants to make the setup and operation of an IOTA fullnode as easy as possible, further development work will be aimed at automating everything as much as possible. In addition to Hornet, the installation of the Bee-Node per mouse click will be integrated into Raspihive next year. Besides the integration of many planned additional features, the focus will also be on security, reliability and design.</p>
+<p>If you have fun developing and programming or are interested and want to learn something, we would be very happy if you want to participate in this exciting project. Besides your feedback, you are welcome to integrate your own ideas into Raspihive.</p>
+<p>Many thanks to Olsche from <a href="http://www.easy-passphrase-saver.de">www.easy-passphrase-saver.de</a> as a tester for his valuable feedback, which helped us to constantly improve Raspihive.</p>
+<p>As always, I am always available for any questions you may have.
+You are also welcome to visit the einfachIOTA Telegram Group - - &gt; <a href="https://t.me/einfachIOTA">https://t.me/einfachIOTA</a></p>
+<p>Yours
+PIOTA</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/hivedocs/docs/doc2"><span class="arrow-prev">← </span><span>Previous</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-hardware-and-software-requirements">1 Hardware and software requirements</a></li><li><a href="#2-download-and-setup-raspberry-pi-os-64-bit-beta">2 Download and setup Raspberry Pi OS (64 bit) beta</a></li><li><a href="#3-short-version-for-setting-up-raspihive">3 Short version for setting up Raspihive</a></li><li><a href="#4-long-version-for-setting-up-raspihive">4 Long version for setting up Raspihive</a><ul class="toc-headings"><li><a href="#41-basic-configuration-of-the-raspberry-pis-with-the-setup-wizard">4.1 Basic configuration of the Raspberry Pi's with the setup wizard</a></li><li><a href="#42-setting-up-the-port-shares-in-the-fritzbox-router">4.2 Setting up the port shares in the Fritz!Box (Router)</a></li><li><a href="#43-cloning-the-raspihive-repository-of-github">4.3 Cloning the Raspihive repository of Github</a></li><li><a href="#44-create-a-shortcut-to-the-supplied-raspihive-start-file-and">4.4 Create a shortcut to the supplied Raspihive start file and</a></li><li><a href="#45-first-start-of-raspihive-and-installation-of-the-hornet-node">4.5 First start of Raspihive and installation of the Hornet Node</a></li><li><a href="#46-optional-installation-of-the-reverse-proxy--certbot--process-for-obtaining-an-ssl-certificate-from-lets-encrypt">4.6 Optional: Installation of the reverse proxy + Certbot + process for obtaining an SSL certificate from Let's Encrypt</a></li></ul></li><li><a href="#5-further-functions-of-raspihive">5. further functions of Raspihive</a></li><li><a href="#6-outlook-and-further-development-of-raspihive">6 outlook and further development of Raspihive</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/hivedocs/" class="nav-home"><img src="/hivedocs/img/favicon.ico" alt="RaspiHive Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/hivedocs/docs/quickstart.html">Getting Started</a></div><div><h5>Community</h5><a href="https://discord.com/invite/bZhKUe6">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="https://raspihive.org">Website</a><a href="https://github.com/Raspihive/raspihive">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 RaspiHive</section></footer></div></body></html>
