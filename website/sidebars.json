@@ -1,10 +1,6 @@
 {
   "docs": {
     "Quick start": ["quickstart"],
-    "First Category": ["doc2"],
     "Setup": ["install"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
   }
 }

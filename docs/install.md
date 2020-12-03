@@ -10,8 +10,10 @@ Hardware requirements:
 - Rasperry Pi 4 with at least 4 GB RAM 
 - a suitable case with fan for the Raspberry Pi
 - Official Raspberry Pi power supply
-- A 2.5 inch USB hard disk (250 GB or more) --> Important: make sure that the USB-SSD   
-   hard disk an external power supply, i.e. a power supply unit is supplied. 
+- A 2.5 inch USB hard disk (from 250 GB or more) - - > Important: make sure that the USB-SSD hard disk is 
+  supplied with an external power supply, i.e. a power adapter. I would recommend the following parts for this:
+	External case
+	SSD Samsung Evo 500GB
 - USB - card reader for microSD cards
 - Monitor with HDMI connector
 - A Micro-HDMI to HDMI adapter
@@ -19,7 +21,7 @@ Hardware requirements:
 - Network or Ethernet LAN cable with an RJ 45 connector (CAT-6)
 - Optional: Sunfounder 7 inch touchscreen display 
 - Optional: 1 microSD card with 64 GB or more. (If you don't want to use a SSD, I would choose from
-    However, we do not recommend continuous node operation for performance reasons. For test purposes this is completely sufficient)
+    However, we do not recommend continuous node operation for performance reasons. For test purposes this is completely sufficient) + USB - card reader for microSD cards
 
 Software requirements:
 
