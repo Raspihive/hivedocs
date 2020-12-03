@@ -23,8 +23,8 @@ const users = [
 const siteConfig = {
   title: 'RaspiHive Docs', // Title for your website.
   tagline: 'How To RaspiHive',
-  url: 'https://raspihive.github.io/hivedocs', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  url: 'https://raspihive.github.io', // Your website URL
+  baseUrl: '/hivedocs/', // Base URL for your project */
   cname: 'docs.raspihive.org',
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
