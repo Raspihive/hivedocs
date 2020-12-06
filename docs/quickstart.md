@@ -10,8 +10,17 @@ sidebar_label: Quick start
 - Rasperry Pi 4 with at least 4 GB RAM 
 - a suitable case with fan for the Raspberry Pi
 - Official Raspberry Pi power supply
-- A 2.5 inch USB hard disk (250 GB or more) --> Important: make sure that the USB-SSD   
-   hard disk an external power supply, i.e. a power supply unit is supplied. 
+- A 2.5 inch USB hard disk (from 250 GB or more) - - > Important: make sure that the USB-SSD hard disk is 
+  supplied with an external power supply, i.e. a power adapter. I would recommend the following parts for this:
+	<br></br>
+   [<b>We use this case from Amazon (klick)</b>](https://www.amazon.de/DIGITUS-71105-Festplattengeh%C3%A4use-SATA-schwarz/dp/B01N39MC0U/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=DIGITUS%2B-%2BDA-71105%2B-%2BFestplattengeh%C3%A4use%2BSSD%2FHDD&qid=1607193916&sr=8-3&th=1)
+   <br></br>
+   and: 
+   <br></br>
+   [<b>This Power Supply from Amazon (klick)</b>](https://www.amazon.de/gp/product/B07R76FJS4/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
+   
+	SSD Samsung Evo 500GB
+
 - USB - card reader for microSD cards
 - Monitor with HDMI connector
 - A Micro-HDMI to HDMI adapter
