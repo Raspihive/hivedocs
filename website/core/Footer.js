@@ -39,7 +39,7 @@ class Footer extends React.Component {
             <h5>Community</h5>
             <a href="https://discord.com/invite/bZhKUe6">Project Chat</a>
             <a
-              href="https://twitter.com/"
+              href="https://twitter.com/raspihive"
               target="_blank"
               rel="noreferrer noopener">
               Twitter
