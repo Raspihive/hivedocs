@@ -3,11 +3,11 @@
 ## run
 >git clone https://github.com/Raspihive/hivedocs.git
 
-> cd /hivedocs/website/static
+> cd /hivedocs/website
 
 > yarn install
 
-> yarn run start
+> yarn start / npm run start
 
 ## deployment 
 
