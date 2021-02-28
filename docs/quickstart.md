@@ -18,8 +18,12 @@ sidebar_label: Quick start
    and: 
    <br></br>
    [<b>This Power Supply from Amazon (klick)</b>](https://www.amazon.de/gp/product/B07R76FJS4/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
+   <br><br>
+   and: 
+   <br></br>
+   [<b> SSD Samsung Evo 500GB from Amazon (klick)</b>](https://www.amazon.de/Samsung-MZ-76E500B-EU-interne-schwarz/dp/B078WQT6S6/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Samsung+860+EVO+500GB+2%2C5&qid=1607193058&sr=8-1)
    
-	SSD Samsung Evo 500GB
+	
 
 - USB - card reader for microSD cards
 - Monitor with HDMI connector
@@ -36,3 +40,4 @@ sidebar_label: Quick start
 Download the ready-to-go image from our [<b>Website</b>](https://raspihive.org/#/download)
 
 Continue -> [<b>here</b>](https://docs.raspihive.org/docs/install#45-first-start-of-raspihive-and-installation-of-the-hornet-node) with our guide
+
