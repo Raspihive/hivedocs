@@ -324,13 +324,13 @@ and
 ```sudo nano boot/cmdline.txt```
 
 
-<img src="../images/32.png">
+<img src="../images/32.jpg">
 
 Now add in the cmdline.txt the entry: 
 
 "usb-storage.quirks=152d:1337:u" and save the change with "Ctrl+o" and exit the file again with "Ctrl+x".
 
-<img src="../images/33.png">
+<img src="../images/33.jpg">
 
 Now you can reboot the Raspberry once and then the USB 3.0 boot should work fine. 
 
