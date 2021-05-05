@@ -285,7 +285,22 @@ At the end you should see the message: "Congratulations" and a small summary abo
 
 <img src="../images/31.png">
 
+Chrysalis customization to generate login data:
+Open two new terminal windows and navigate to the Hornet folder in both:
+cd / var / lib / hornet
+Now give the command in the left terminal window:
+sudo nano config.json
+a. In the right terminal window give the command:
+hornet tool pwdhash
+and confirm with Enter. Now assign a password for your dashboard. Then two hash values are generated and displayed, which you have to copy into the config.json under Dashboard.
 
+<img src="../images/54.png">
+
+Now scroll down in the left window to the dashboard entry and insert a user name of your choice and the two hash values and save the changes with Ctrl + o and enter and exit the file with Ctrl + x. You can then log into the extended dashboard.
+
+<img src="../images/55.png">
+
+Important: It is best to update your Raspihive to version 2.1.2 and uninstall nginx once and reinstall it and start the Certbot process again.
 
 ## 7. Outlook and further development of Raspihive 
 
