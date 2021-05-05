@@ -307,9 +307,30 @@ PIOTA
 
 
 
+## 8. Update 08.03.2021 - Troubleshooting 
+
+With some hard disk adapters it can happen that the USB 3.0 boot does not work immediately with the Raspberry Pi. In this case plug the USB SSD hard disk into the USB 2.0 port and add the storage.quirk entry in the boot/cmdline.txt as shown in the following screenshots: 
+
+Open two terminal windows and enter in the right one the command: 
+
+```lsusb``` 
+
+You need the marked Device and Vendor ID. In the left terminal window you enter the two commands: 
+
+```cd /``` 
+
+and 
+
+```sudo nano boot/cmdline.txt```
 
 
+<img src="../images/32.jpg">
 
+Now add in the cmdline.txt the entry: 
 
+"usb-storage.quirks=152d:1337:u" and save the change with "Ctrl+o" and exit the file again with "Ctrl+x".
 
+<img src="../images/33.jpg">
+
+Now you can reboot the Raspberry once and then the USB 3.0 boot should work fine. 
 
