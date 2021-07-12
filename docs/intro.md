@@ -1,9 +1,9 @@
 ---
-id: quickstart
+id: intro
 title: Quick start
 sidebar_label: Quick start
+sidebar_position: 1
 ---
-
 
 ## Hardware requirements
 
@@ -12,15 +12,10 @@ sidebar_label: Quick start
 - Official Raspberry Pi power supply
 - A 2.5 inch USB hard disk (from 250 GB or more) - - > Important: make sure that the USB-SSD hard disk is 
   supplied with an external power supply, i.e. a power adapter. I would recommend the following parts for this:
-	<br></br>
    [<b>We use this case from Amazon (klick)</b>](https://www.amazon.de/DIGITUS-71105-Festplattengeh%C3%A4use-SATA-schwarz/dp/B01N39MC0U/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=DIGITUS%2B-%2BDA-71105%2B-%2BFestplattengeh%C3%A4use%2BSSD%2FHDD&qid=1607193916&sr=8-3&th=1)
-   <br></br>
    and: 
-   <br></br>
    [<b>This Power Supply from Amazon (klick)</b>](https://www.amazon.de/gp/product/B07R76FJS4/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
-   <br><br>
    and: 
-   <br></br>
    [<b> SSD Samsung Evo 500GB from Amazon (klick)</b>](https://www.amazon.de/Samsung-MZ-76E500B-EU-interne-schwarz/dp/B078WQT6S6/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Samsung+860+EVO+500GB+2%2C5&qid=1607193058&sr=8-1)
    
 	

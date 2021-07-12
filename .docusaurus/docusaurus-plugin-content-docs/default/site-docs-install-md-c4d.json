@@ -1,0 +1,24 @@
+{
+  "unversionedId": "install",
+  "id": "install",
+  "isDocsHomePage": false,
+  "title": "Start",
+  "description": "1 Hardware and software requirements",
+  "source": "@site/docs/install.md",
+  "sourceDirName": ".",
+  "slug": "/install",
+  "permalink": "/docs/install",
+  "editUrl": "https://github.com/Raspihive/raspihive/edit/master/website/docs/install.md",
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "install",
+    "title": "Start",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Quick start",
+    "permalink": "/docs/intro"
+  }
+}

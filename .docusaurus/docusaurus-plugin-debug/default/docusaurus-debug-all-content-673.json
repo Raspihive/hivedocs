@@ -1,0 +1,118 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "versionLabel": "Next",
+          "versionPath": "/docs",
+          "versionEditUrl": "https://github.com/Raspihive/raspihive/edit/master/website/docs",
+          "versionEditUrlLocalized": "https://github.com/Raspihive/raspihive/edit/master/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "versionBanner": "none",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/Users/huhn/develop/iota-community/hivedocs/sidebars.js",
+          "contentPath": "/Users/huhn/develop/iota-community/hivedocs/docs",
+          "contentPathLocalized": "/Users/huhn/develop/iota-community/hivedocs/i18n/en/docusaurus-plugin-content-docs/current",
+          "mainDocId": "install",
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "doc",
+                "id": "install"
+              },
+              {
+                "type": "doc",
+                "id": "intro",
+                "label": "Quick start"
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/docs/install": "tutorialSidebar",
+            "/docs/intro": "tutorialSidebar"
+          },
+          "docs": [
+            {
+              "unversionedId": "install",
+              "id": "install",
+              "isDocsHomePage": false,
+              "title": "Start",
+              "description": "1 Hardware and software requirements",
+              "source": "@site/docs/install.md",
+              "sourceDirName": ".",
+              "slug": "/install",
+              "permalink": "/docs/install",
+              "editUrl": "https://github.com/Raspihive/raspihive/edit/master/website/docs/install.md",
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "id": "install",
+                "title": "Start",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "Quick start",
+                "permalink": "/docs/intro"
+              }
+            },
+            {
+              "unversionedId": "intro",
+              "id": "intro",
+              "isDocsHomePage": false,
+              "title": "Quick start",
+              "description": "Hardware requirements",
+              "source": "@site/docs/intro.md",
+              "sourceDirName": ".",
+              "slug": "/intro",
+              "permalink": "/docs/intro",
+              "editUrl": "https://github.com/Raspihive/raspihive/edit/master/website/docs/intro.md",
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "id": "intro",
+                "title": "Quick start",
+                "sidebar_label": "Quick start",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Start",
+                "permalink": "/docs/install"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogPosts": [],
+      "blogListPaginated": [],
+      "blogTags": {},
+      "blogTagsListPath": null
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      },
+      {
+        "type": "mdx",
+        "permalink": "/markdown-page",
+        "source": "@site/src/pages/markdown-page.md"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-theme-classic": {
+    "default": null
+  }
+}
