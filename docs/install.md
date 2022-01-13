@@ -8,7 +8,7 @@ sidebar_position: 1
 ## 1 Hardware and software requirements
 Hardware requirements:
 
-- Rasperry Pi 4 with at least 4 GB RAM TEST
+- Rasperry Pi 4 with at least 4 GB RAM
 - a suitable case with fan for the Raspberry Pi
 - Official Raspberry Pi power supply
 - A 2.5 inch USB hard disk (from 250 GB or more) - - > Important: make sure that the USB-SSD hard disk is 
